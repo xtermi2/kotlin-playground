@@ -8,9 +8,12 @@ fun main() {
     println("${user.name} is admin ${user.admin}")
 
     val userVerbose = UserVerbose("verbose")
+    // we call the getter here, not the field, thats not possible in kotlin
     println("${userVerbose.name} is admin ${userVerbose.admin}")
 }
 
+// for all properties a default getter and setter is generated
+// we can set defaults, that's also possible in all functions
 class User(val name: String, val admin: Boolean = false) {
 
 }

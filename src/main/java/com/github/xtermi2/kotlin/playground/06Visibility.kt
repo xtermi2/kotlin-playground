@@ -4,7 +4,11 @@ package com.github.xtermi2.kotlin.playground
  * @author Andreas Keefer
  */
 fun main() {
-    PublicClass().print()
+    val publicClass = PublicClass()
+    publicClass.print()
+    println(publicClass.foo)
+    publicClass.setPrivate("changed private value")
+    println(publicClass.getPrivate())
 
     val privateClass = PrivateClass()
     // private not visible from outside
@@ -18,8 +22,25 @@ fun main() {
 
 // default visibility is public for classes
 class PublicClass {
+
+    // default is public
+    var foo: String = "bar"
+
+    // private properties are not available via default getter/setter, because getters and setters have the same visibility like the property
+    private var private: String = "I'm private"
+
     fun print() {
         println("I'm public")
+    }
+
+    // this is not a getter in kotlin way, more like a hack or antipattern
+    fun getPrivate(): String {
+        return private;
+    }
+
+    // this is not a setter in kotlin way, more like a hack or antipattern
+    fun setPrivate(private: String) {
+        this.private = private;
     }
 }
 

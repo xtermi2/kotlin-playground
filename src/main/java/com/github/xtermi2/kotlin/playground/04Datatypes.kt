@@ -19,6 +19,12 @@ fun main() {
     // elvis operator
     val upperOrDefault = nullable?.toUpperCase() ?: "Some Default"
     println(upperOrDefault)
+    try {
+        // elvis operator can also throw exceptions
+        nullable ?: throw NullPointerException("nullable is null")
+    } catch (e: NullPointerException) {
+        println("elvis operator can also throw exceptions")
+    }
 
     // initialized array
     val intArray = arrayOf(1, 2, 3, 4, 5)

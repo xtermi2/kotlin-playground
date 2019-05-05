@@ -40,6 +40,20 @@ fun main() {
     // the contravariance makes the compile more relaxed about more general types, so we can pass here aky super type of Motorbike
     val garage2 = Garage2<Motorbike>(listOf(Motorbike(), Motorbike()), cleaner)
     garage2.cleanVehicle(1)
+
+    // use-site variance
+    val input = mutableListOf(Motorbike(), Motorbike())
+    val output = mutableListOf<Vehicle2>()
+    copyVehicles<Vehicle2>(input, output)
+    println(output)
+}
+
+// use-site variance
+// this is like in java: input<? extends T> output<? super T>
+fun <T> copyVehicles(input: MutableList<out T>, output: MutableList<in T>) {
+    for (vehicle in input) {
+        output.add(vehicle)
+    }
 }
 
 fun <T> Iterable<T>.printCollection() {

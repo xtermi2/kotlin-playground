@@ -1,3 +1,4 @@
+@file:JvmName("ExtensionFunctions")
 package com.github.xtermi2.kotlin.playground
 
 /**

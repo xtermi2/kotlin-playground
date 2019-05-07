@@ -1,3 +1,6 @@
+// you can rename the static class the kotlin compiler generates for all toplevel functions here
+@file:JvmName("Functions")
+
 package com.github.xtermi2.kotlin.playground
 
 /**

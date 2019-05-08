@@ -8,7 +8,7 @@ fun main() {
     println("${user.name} is admin ${user.admin}")
 
     val userVerbose = UserVerbose("verbose")
-    // we call the getter here, not the field, thats not possible in kotlin
+    // we call the getter here, not the field, that's not possible in kotlin
     println("${userVerbose.name} is admin ${userVerbose.admin}")
 }
 

@@ -14,9 +14,7 @@ fun main() {
 
 // for all properties a default getter and setter is generated
 // we can set defaults, that's also possible in all functions
-class User(val name: String, val admin: Boolean = false) {
-
-}
+class User(val name: String, val admin: Boolean = false)
 
 // same as User, but verbose with primary constructor
 class UserVerbose constructor(name: String, admin: Boolean) {

@@ -1,9 +1,19 @@
 package com.github.xtermi2.kotlin.playground
 
+// const requires:
+// - Initialized with a value of type String or a primitive type
+// - No custom getter
+const val MY_CONSTANT = "I'm a top level compile-time constant"
+
+val MY_CONSTANT_LIST = listOf("I'm a top level constant")
+
 /**
  * this is a top level function, outside of a class
  */
 fun main() {
+    println(MY_CONSTANT)
+    println(MY_CONSTANT_LIST)
+
     // val is like final (only assignable once / immutable variable)
     val language = "Kotlin"
     // var is mutable

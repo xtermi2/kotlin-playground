@@ -59,6 +59,11 @@ private class PrivateClass {
 
 // internal is only visible in the same module, but because internal is compiled to public, it's accessible from java also
 // outside of a module
+// More specifically, a module is a set of Kotlin files compiled together:
+// - an IntelliJ IDEA module
+// - a Maven project
+// - a Gradle source set (with the exception that the test source set can access the internal declarations of main)
+// - a set of files compiled with one invocation of the <kotlinc> Ant task
 internal class InternalClass {
     internal fun print() {
         println("I'm public")

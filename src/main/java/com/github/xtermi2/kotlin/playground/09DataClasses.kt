@@ -3,12 +3,7 @@ package com.github.xtermi2.kotlin.playground
 /**
  * @author Andreas Keefer
  */
-
-val MY_CONSTANT = "I'm a top level constant"
-
 fun main() {
-    println(MY_CONSTANT)
-
     val user1 = DataUser("Joe")
     println(user1)
     val user2 = DataUser("Joe")

@@ -31,7 +31,7 @@
             <artifactId>kotlinx-coroutines-core</artifactId>
             <version>${kotlinx-coroutines-core.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test-junit</artifactId>

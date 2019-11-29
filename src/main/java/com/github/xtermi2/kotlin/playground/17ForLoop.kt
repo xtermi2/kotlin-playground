@@ -68,5 +68,5 @@ fun main() {
 // extension function for ClosedRange<String> to be able to use string range in a for loop (x in "a".."x")
 operator fun ClosedRange<String>.iterator(): Iterator<String> =
         // this is just a demo and makes no sense like this :D
-        listOf(this.start, this.endInclusive)
+        listOf(start, endInclusive)
                 .iterator()

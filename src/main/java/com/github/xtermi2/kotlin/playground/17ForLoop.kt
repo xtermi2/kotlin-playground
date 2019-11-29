@@ -2,6 +2,9 @@ package com.github.xtermi2.kotlin.playground
 
 /**
  * @author Andreas Keefer
+ *
+ * - while and do while loops are the same as in java!
+ * - no classic for loop like in java exists in kotlin: for (int i = 0; i < 10; i++)
  */
 fun main() {
     // range operator

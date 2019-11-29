@@ -16,4 +16,8 @@ fun parseStr(str: String): Int {
     } finally {
         println("finally")
     }
+
+    // use is a try-with alternative in kotln. use is available on AutoCloseable or Closeable:
+    {}.javaClass.getResourceAsStream("/testfile.txt")
+            .use { it.reader().forEachLine { println(it) } }
 }

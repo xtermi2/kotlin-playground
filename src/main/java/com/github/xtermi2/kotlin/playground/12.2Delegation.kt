@@ -22,4 +22,4 @@ data class Engine(override val horsepower: Int) : PowerSource
 // This will automatically implement all the interface members of PowerSource in MotorVehicle
 // by invoking the same member on engine.
 // This only works for properties that are declared in the constructor.
-data class MotorVehicle(val engine: Engine): PowerSource by engine
+data class MotorVehicle(val engine: Engine) : PowerSource by engine

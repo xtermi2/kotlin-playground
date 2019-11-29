@@ -36,7 +36,7 @@ fun countTo100() =
 fun countTo100_apply() =
         StringBuilder().apply {
             for (i in 1..99) {
-                // in the lambda passed in the with block we can use the first parameter without writing the variable name
+                // in the lambda passed in the apply block we can use the first parameter without writing the variable name
                 append(i) // shortcut for this.append(i)
                 append(", ")
             }

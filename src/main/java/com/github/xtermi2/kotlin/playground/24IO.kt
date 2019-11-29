@@ -7,7 +7,6 @@ import java.io.File
  */
 fun main() {
     // use is like try-with in java
-
     {}.javaClass.getResourceAsStream("/testfile.txt").use { it.reader().forEachLine { println(it) } }
 
     println("----------------")

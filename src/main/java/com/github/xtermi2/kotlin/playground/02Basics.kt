@@ -18,7 +18,7 @@ fun main() {
     val language = "Kotlin"
     // var is mutable
     var hello = "H"
-    hello = hello + "ello"
+    hello += "ello"
     // String templates
     println("$hello $language")
 

@@ -66,6 +66,7 @@ fun main() {
 }
 
 // extension function for ClosedRange<String> to be able to use string range in a for loop (x in "a".."x")
+// operator is required when extension should be usable at operators (operator overloading)
 operator fun ClosedRange<String>.iterator(): Iterator<String> =
         // this is just a demo and makes no sense like this :D
         listOf(start, endInclusive)
